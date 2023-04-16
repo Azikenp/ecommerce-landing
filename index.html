@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/dist/output.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body class="relative bg-lightGrayishBlue md:bg-white">
+  <ul id="list">
+		<div>
+			<span id="close-menu-btn" class="font-bold text-midder hover:cursor-pointer">x</span>
+		</div>
+		<a class="font-bold  text-black" href="#">
+			<li>Collections</li>
+		</a>
+		<a class="font-bold  text-black" href="#">
+			<li>Men</li>
+		</a>
+		<a class="font-bold  text-black" href="#">
+			<li>Women</li>
+		</a>
+		<a class="font-bold  text-black" href="#">
+			<li>About</li>
+		</a>
+		<a class="font-bold  text-black" href="#">
+			<li>Contact</li>
+		</a>
+  </ul>
+
+  <nav class="relative p-6 bg-white md:px-20">
+    <div class="flex items-center">
+		<div id="open-menu-btn">
+			<i class="fa-solid fa-bars mr-4 relative cursor-pointer md:hidden"></i>
+		</div>
+		<img class="w-28 cursor-pointer md:mr-14" src="./images/logo.svg" alt="logo">
+		<ul class="hidden md:flex">
+			<a class=" relative mr-3 text-sm text-grayishBlue" href="#">
+				<li>Collections</li>
+			</a>
+			<a class="relative mr-3 text-sm text-grayishBlue" href="#">
+				<li>Men</li>
+			</a>
+			<a class="relative mr-3 text-sm text-grayishBlue" href="#">
+				<li>Women</li>
+			</a>
+			<a class="relative mr-3 text-sm text-grayishBlue" href="#">
+				<li>About</li>
+			</a>
+			<a class="relative text-sm text-grayishBlue" href="#">
+				<li>Contact</li>
+			</a>
+		</ul>
+		<i class="cart fas fa-thin fa-cart-shopping absolute right-16 cursor-pointer md:right-32  text-grayishBlue"></i>
+		<span class="cart-numbering bg-orange text-xsm text-white
+		px-1 rounded">0</span>
+		<img class="w-5 absolute cursor-pointer right-6 md:right-20 hover:border-paleOrange rounded-full border-2" src="./images/image-avatar.png" alt="profile-pic">
+    </div>
+    
+  </nav>
+
+  <section class="relative flex flex-col justify-center items-center md:flex-row md:px-32 md:py-16">
+	<div class="cart-div absolute z-10 bg-white w-96 h-40 m-10 rounded">
+		<div class="cart-head p-4 font-bold text-base text-veryDarkBlue">
+			<h2>Cart</h2>
+		</div>
+		<div class="cart-body p-4 flex flex-col  w-full h-full text-darkGrayishBlue text-sm font-bold">
+			<p class="mt-10 ml-20">Your cart is empty.</p>
+			<!-- <div class="flex items-center">
+				<img class="w-9 rounded mr-3" src="/images/image-product-1-thumbnail.jpg" alt="">
+				<div class="mr-3">
+					<p class="text-grayishBlue text-base">Fall Limited Edition Sneakers</p>
+					<div class="flex flex-row">
+						<p class="text-grayishBlue mr-1 text-base">$125 x 3</p> <span class="font-bold text-base">$375.00</span>
+					</div>
+				</div>
+				<div class="clear-cart cursor-pointer">
+					<i class="fa-solid fa-trash-can"></i>
+				</div>
+			</div>
+			<div class="bg-orange mt-5 text-base rounded text-white text-center">
+				<button class="h-10">Checkout</button>
+			</div> -->
+		</div>
+	</div>
+
+	<div class="relative md:mr-6 lg:mr-16">
+		<img id="image-slider" class="w-screen h-72 md:rounded lg:h-96" src="./images/image-product-1.jpg" alt="">
+		<div class="hidden md:flex justify-between items-center mt-5">
+			<div id="small-img" class="popo relative mr-2 cursor-pointer">
+				<div class="popori absolute bg-white w-full h-full opacity-50 border-2 hidden"></div>
+				<img class="rounded" src="./images/image-product-1-thumbnail.jpg" alt="">
+			</div>
+			<div id="small-img" class="popo relative mr-2 cursor-pointer">
+				<div class="popori absolute bg-white w-full h-full opacity-50 border-2 hidden"></div>
+				<img class="rounded" src="./images/image-product-2-thumbnail.jpg" alt="">
+			</div>
+			<div id="small-img" class="popo relative mr-2 cursor-pointer">
+				<div class="popori absolute bg-white w-full h-full opacity-50 border-2 hidden"></div>
+				<img class="rounded" src="./images/image-product-3-thumbnail.jpg" alt="">
+			</div>
+			<div id="small-img" class="popo relative mr-2 cursor-pointer">
+				<div class="popori absolute bg-white w-full h-full opacity-50 border-2 hidden"></div>
+				<img class="rounded" src="./images/image-product-4-thumbnail.jpg" alt="">
+			</div>
+		</div>
+		<div id="prev" class="absolute top-1/2 w-8 h-8 rounded-full flex cursor-pointer items-center justify-center text-sm font-bold left-3 bg-white md:hidden">
+			<i class="fa-solid fa-less-than -translate-x-0.5"></i>
+		</div>
+		<div id="next" class="absolute top-1/2 w-8 h-8 rounded-full cursor-pointer flex items-center justify-center font-bold text-sm right-3 bg-white md:hidden">
+			<i class="fa-solid fa-greater-than translate-x-0.5"></i>
+		</div>
+	</div>
+
+	<div class="relative bg-white">
+		<div class="uppercase text-bold p-5 text-orange text-sm font-bold tracking-widest">
+			<h2>Sneaker Company</h2>
+		</div>
+		<div class="px-5 text-bold text-black text-xl font-bold tracking-wide leading-9 md:text-xxl">
+			<h3>Fall Limited Edition Sneakers</h3>
+		</div>
+		<div class="p-5 text-grayishBlue text-base">
+			<p>
+				These low-profile sneakers are your perfect casual wear companion. Featuring a 
+				durable rubber outer sole, they’ll withstand everything the weather can offer.
+			</p>
+		</div>
+		<div class="flex px-5 items-center justify-between md:flex-col md:items-start">
+			<div class="flex items-center">
+				<span id="total-price" class="text-xl font-bold mr-3"> $125.00</span>
+				<div class="bg-paleOrange rounded text-orange py-1 px-2 text-sm font-bold">
+					<span>50%</span>
+				</div>
+			</div>
+			<div class="relative p-1">
+				<hr class="w-full h-3 text-grayishBlue absolute top-1/2">
+				<div class="text-grayishBlue text-mid">
+					<span id="slashed-price">$250.00</span>
+				</div>
+			</div>
+		</div>
+		<div class="flex items-center flex-col px-5 md:flex-row">
+			<div class="flex items-center justify-between bg-lightGrayishBlue rounded my-4 px-4 py-2 w-full md:mr-5 md:w-48">
+				<span id="decrease" class="font-bold cursor-pointer text-orange text-midder hover:text-paleOrange">-</span>
+				<span id="number" class="font-bold">0</span>
+				<span id="increase" class="font-bold cursor-pointer text-orange text-midder hover:text-paleOrange">+</span>
+			</div>
+			<div class="add-to-cart bg-orange cursor-pointer rounded text-center py-3 mb-10 text-white text-sm font-bold w-full hover:bg-paleOrange md:mb-0">
+				<i class="fas fa-thin fa-cart-shopping  text-grayishBlue mr-3"></i>
+				<button>Add to cart</button>
+			</div>
+		</div>
+
+	</div>
+  </section>
+
+  <!-- modal -->
+  <div id="overlay" class="hidden md:flex items-center justify-center">
+	<div id="modal"></div>
+	<div id="modal-el">
+		<img id="image-slider1" class="w-screen h-72 md:rounded" src="./images/image-product-1.jpg" alt="">
+		<div class="hidden md:flex justify-between items-center mt-5">
+		<div id="small-img1" class="mr-2">
+			<img class="rounded" src="./images/image-product-1-thumbnail.jpg" alt="">
+		</div>
+		<div id="small-img1" class="mr-2">
+			<img class="rounded" src="./images/image-product-2-thumbnail.jpg" alt="">
+		</div>
+		<div id="small-img1" class="mr-2">
+			<img class="rounded" src="./images/image-product-3-thumbnail.jpg" alt="">
+		</div>
+		<div id="small-img1" class="mr-2">
+			<img class="rounded" src="./images/image-product-4-thumbnail.jpg" alt="">
+		</div>
+	</div>
+	<div id="less" class="absolute cursor-pointer top-1/2 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold bg-white hover:text-orange md:top-1/3">
+		<i class="fa-solid fa-less-than -translate-x-0.5"></i>
+	</div>
+	<div id="great" class="absolute cursor-pointer top-1/2 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm bg-white hover:text-orange md:top-1/3">
+		<i class="fa-solid fa-greater-than translate-x-0.5"></i>
+	</div>
+	<div id="hide" class="absolute font-bold text-white hover:text-orange">
+		<span>x</span>
+	</div>
+  </div>
+
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
