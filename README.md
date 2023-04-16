@@ -24,8 +24,8 @@ Users should be able to:
 - View the cart and remove items from it
 ### Links
 
-- Solution URL: https://github.com/Azikenp/manage-landing-page.git
-- Live Site URL: https://azikenp-manage-landing-page.netlify.app/
+- Solution URL: https://github.com/Azikenp/ecommerce-landing.git
+- Live Site URL: https://azikenp-ecommerce.netlify.app/
 
 ## My process
 
